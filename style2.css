@@ -1,0 +1,182 @@
+/* 1. RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. TIPOGRAFIA E CORES GLOBAIS (Estilo Limpo) */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1d1d1f; /* Cinza quase preto */
+    background-image: linear-gradient(to top, black, white); 
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* 3. NAVEGAÇÃO (FIXA - Estilo Apple) */
+.navbar {
+    position: sticky; /* ou fixed se quiser que ele flutue em cima de tudo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque sutil */
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08); /* Sombra suave */
+    z-index: 1000;
+}
+
+
+.roda{
+    width: 25px;
+    height: 25px;
+    transform: scale(0.8); /* Diminui a imagem para 80% do tamanho original */
+}
+
+.navbar nav a {
+    color: #424245;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #007aff; /* Azul de destaque da Apple */
+}
+
+.carrinho-info {
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.contador {
+    font-size: 0.8em;
+    background-color: #000000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-left: 5px;
+    line-height: 1;
+}
+
+/* 4. ESTILIZAÇÃO DO CADASTRO DO USUÁRIO */
+.cadastro-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #cdcdcd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    position: relative;
+}
+
+.cadastro-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #1d1d1f;
+}
+
+.cadastro-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+   
+}
+
+.cadastro-container input[type="text"],
+.cadastro-container input[type="email"],
+.cadastro-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.cadastro-container input[type="submit"] {
+    background-color: #ff0000; /* Azul de destaque da Apple */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-container input[type="submit"]:hover {
+    background-color: #005bb5; /* Tom mais escuro do azul */
+}
+
+
+.button {
+    background-color: #3498db;   /* Cor de fundo azul*/
+    padding: 12px 24px;          /* Espaçamento interno */
+    border: none;                /* Sem borda */
+    border-radius: 8px;          /* Cantos arredondados */
+    font-size: 16px;             /* Tamanho da fonte */
+    font-weight: bold;           /* Negrito */
+    cursor: pointer;             /* Cursor de mãozinha */
+    transition: background 0.3s, box-shadow 0.3s; /* Transição suave */
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.1); /* Sombra leve */
+  }
+  
+  .button:hover {
+    background-color: #538fb8;   /* Azul um pouco mais escuro no hover */
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+  }
+  #btn-cadastrar{
+    background-color: #3498db;
+    color: #000000;
+    margin: 0;
+    border: none;
+    text-align: center;
+    font-weight: bold;  
+  }
+
+
+footer{
+    position: fixed;
+    background-color: #ccc;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+.p {
+    font-size: x-large; 
+}

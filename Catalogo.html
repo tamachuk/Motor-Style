@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Catálogo</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">
+        <div class="logo2">MotorStyle
+            <img src="Logo.jpeg" alt="logo"
+            height="40" width="40">
+            
+            
+        </div>
+        <nav>
+           <a href="index.html">Início</a>
+            <a href="Catalogo.html">Catalogo</a>
+            <a href="cadastro.html">Cadastro</a>
+            
+        </nav>
+        <div class="carrinho-info">
+            🛒
+            <span id="contador-carrinho" class="contador">0</span>
+        </div>
+      <div class="controls">
+        <input id="q" type="search" placeholder="Pesquisar produtos..." aria-label="Pesquisar">
+        <select id="category">
+          <option value="todos">Todas as categorias</option>
+          <option value="roupas">Pneus</option>
+          <option value="acessorios">Rodas</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <div id="grid" class="grid">
+        <!-- Cards: copie / modifique conforme necessário -->
+
+        <article class="card" data-category="roda" data-title="Rada01" onclick="window.location.href='roda01.html'">
+          <img class="thumb" src="roda1.png" alt="Roda01">
+          <div class="card-body">
+            <h3 class="title">Rodas cromadas argentina</h3>
+            <p class="desc">Agora com nossa rodas forjadas com uma resistencia melhor contra riscos.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 2.505,90</div>
+              <div class="badge">Em estoque</div>
+            </div>
+          </div>
+        </article> 
+
+        <article class="card" data-category="roda" data-title="Roda02" onclick="window.location.href='roda02.html'">
+          <img class="thumb" src="roda2.png" alt="Roda02">
+          <div class="card-body">
+            <h3 class="title">Rodas scarlet piano</h3>
+            <p class="desc">Agora com nossa rodas forjadas com uma resistencia melhor contra riscos.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 5.005,90</div>
+              <div class="badge">Em estoque</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Pneu" data-title="roda3" onclick="window.location.href='roda03.html'">
+          <img class="thumb" src="roda3.png" alt="roda03">
+          <div class="card-body">
+            <h3 class="title">Rodas mansory
+            </h3>
+            <p class="desc">Agora com nossa rodas forjadas com uma resistencia melhor contra riscos.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 1.300,90</div>
+              <div class="badge">Novo</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="roda" data-title="Rada01" onclick="window.location.href='roda04.html'">
+          <img class="thumb" src="roda4.png" alt="Roda04">
+          <div class="card-body">
+            <h3 class="title">>Rodas bbs limited edition</h3>
+            <p class="desc">Agora com nossa rodas forjadas com uma resistencia melhor contra riscos.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 8.483,20</div>
+              <div class="badge">Em estoque</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="pneu01" data-title="Roda02" onclick="window.location.href='pneu01.html'">
+          <img class="thumb" src="pneu01comum.jpg" alt="pneu01">
+          <div class="card-body">
+            <h3 class="title">Pneu aro 18</h3>
+            <p class="desc">Agora com nossa nova borracha com uma durabilidade melhor.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 505,90</div>
+              <div class="badge">Promoção</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="Pneu02" data-title="Pneu02" onclick="window.location.href='pneu02.html'">
+          <img class="thumb" src="pneu02pista.jpg" alt="Pneu02">
+          <div class="card-body">
+            <h3 class="title">Pneus para autodromo</h3>
+            <p class="desc">Agora com nossos pneus com uma viscosidade na borracha para dar mais aderencia.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 1.505,90</div>
+              <div class="badge">Mais vendido</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="roda" data-title="Rada01" onclick="window.location.href='pneu03.html'">
+          <img class="thumb" src="pneu03camionete.jpg" alt="pneu03">
+          <div class="card-body">
+            <h3 class="title">Roda gripmax</h3>
+            <p class="desc"> Agora nossos pneus feitos para o trbalho duro na lida.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 2.005,90</div>
+              <div class="badge">Em estoque</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-category="roda" data-title="Rada01" onclick="window.location.href='pneu04.html'">
+          <img class="thumb" src="pneu04drift.jpg" alt="Pneu04">
+          <div class="card-body">
+            <h3 class="title">Pneu japan street</h3>
+            <p class="desc">Agora com nossa nova tecnologia para melhor eficiência no drift.</p>
+            <div class="meta">
+              <div class="price">Preço R$ 8.235,90</div>
+              <div class="badge">Em estoque</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fim dos exemplos -->
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Motor Style. Todos os direitos reservados.</p>
+      <p>
+          <a href="/privacidade">Politica de Privacidade</a> |
+          <a href="/termos">Termos de Uso</a>
+      </p>
+  </footer>
+  </div>
+    <link rel="stylesheet" href="script.js">
+</body>
+</html>
