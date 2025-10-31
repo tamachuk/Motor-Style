@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Style - Seu Carrinho de Compras</title>
+    <link rel="stylesheet" href="catalogo.css"> 
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo2">MotorStyle
+            <img src="Logo.jpg" alt="logo" height="40" width="40">
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="Catalogo.html">Catálogo</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="carrinho.html">carrinho</a>
+        </nav>
+        <div class="carrinho-info">
+            🛒
+            <span id="contador-carrinho" class="contador">2</span> </div>
+    </header>
+
+    <main class="carrinho-main">
+        <h1 class="page-title">Meu Carrinho</h1>
+
+        <div class="carrinho-layout">
+            
+            <section class="itens-carrinho">
+                
+                <article class="item-card">
+                    <img src="Roda liga.png" alt="Rodas de Liga Leve Forjadas X90" class="item-imagem">
+                    <div class="item-detalhes">
+                        <h2 class="item-titulo">Rodas de Liga Leve Forjadas X90</h2>
+                        <p class="item-variante">Tamanho: Aro 18 | Cor: Black Piano</p>
+                        <div class="item-acoes">
+                            <span class="item-preco">R$ 3.005,90</span>
+                            <div class="quantidade-controle">
+                                <button class="btn-quantidade">-</button>
+                                <input type="number" value="4" min="1" class="quantidade-input">
+                                <button class="btn-quantidade">+</button>
+                            </div>
+                            <button class="btn-remover">Remover</button>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="divisor">
+
+                <article class="item-card">
+                    <img src="pneu01comum.jpg" alt="Pneu aro 18" class="item-imagem">
+                    <div class="item-detalhes">
+                        <h2 class="item-titulo">Pneu aro 18 (Comum)</h2>
+                        <p class="item-variante">Borracha Macia | Unidade</p>
+                        <div class="item-acoes">
+                            <span class="item-preco">R$ 505,90</span>
+                            <div class="quantidade-controle">
+                                <button class="btn-quantidade">-</button>
+                                <input type="number" value="4" min="1" class="quantidade-input">
+                                <button class="btn-quantidade">+</button>
+                            </div>
+                            <button class="btn-remover">Remover</button>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="divisor">
+
+                <a href="Catalogo.html" class="btn btn-secondary continue-comprando">← Continuar Comprando</a>
+                
+            </section>
+
+            <aside class="resumo-compra">
+                <h3>Resumo do Pedido</h3>
+                
+                <div class="resumo-linha">
+                    <span>Subtotal (8 itens)</span>
+                    <span id="subtotal">R$ 14.047,20</span>
+                </div>
+                
+                <div class="resumo-linha">
+                    <span>Frete Estimado</span>
+                    <span id="frete">Grátis</span>
+                </div>
+
+                <hr>
+                
+                <div class="resumo-linha total">
+                    <span>Total</span>
+                    <span id="total-final" class="price">R$ 14.047,20</span>
+                </div>
+                
+                <a href="checkout.html" class="btn btn-primary btn-checkout">Finalizar Compra</a>
+            </aside>
+        </div>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Motor Style. Todos os direitos reservados.</p>
+        <p>
+            <a href="/privacidade">Politica de Privacidade</a> |
+            <a href="/termos">Termos de Uso</a>
+        </p>
+    </footer>
+</body>
+</html>

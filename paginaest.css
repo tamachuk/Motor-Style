@@ -61,22 +61,24 @@ body {
 }
 
 .btn-primary {
-    background-color: #007aff; /* Azul vibrante (cor de destaque da Apple) */
-    color: #fff;
+     background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
 }
 
 .btn-primary:hover {
-    background-color: #005ce6;
+    background-color: #000000;
+    color: #fff;
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: #007aff;
-    border: 1px solid #007aff;
+    color: #000000;
+    border: 1px solid #000000;
 }
 
 .btn-secondary:hover {
-    background-color: #007aff;
+    background-color: #000000;
     color: #fff;
 }
 
@@ -183,6 +185,7 @@ section {
 
 .text-block {
     flex: 1;
+    text-align: center;
 }
 
 .text-block h3 {
@@ -196,7 +199,7 @@ section {
 }
 
 .learn-more {
-    color: #007aff;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
 }

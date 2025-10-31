@@ -199,3 +199,53 @@ body {
     footer a:hover {
         text-decoration: underline;
     }
+.navbar {
+    position: sticky; /* ou fixed se quiser que ele flutue em cima de tudo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque sutil */
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08); /* Sombra suave */
+    z-index: 1000;
+}
+
+
+.roda-imagem{
+    width: 650px;
+    height: 650px;
+}
+
+.navbar nav a {
+    color: #424245;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #007aff; /* Azul de destaque da Apple */
+}
+
+.carrinho-info {
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.contador {
+    font-size: 0.8em;
+    background-color: #000000;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-left: 5px;
+    line-height: 1;
+}

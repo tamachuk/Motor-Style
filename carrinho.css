@@ -1,0 +1,237 @@
+/* --- Estilos Específicos do Carrinho.css --- */
+
+/* Importante: O HTML do carrinho deve usar o CSS principal (ex: catalogo.css ou paginaest.css) 
+   para herdar o body, navbar, btn-primary/secondary, e footer.
+*/
+
+.carrinho-main {
+    padding-top: 80px; /* Espaço para o navbar fixo */
+    padding-bottom: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    color: #1d1d1f;
+}
+
+/* --- Layout Principal (Itens e Resumo) --- */
+.carrinho-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Alinha o resumo ao topo */
+}
+
+.itens-carrinho {
+    flex: 2.5; /* Ocupa mais espaço na esquerda */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    padding: 20px;
+}
+
+.resumo-compra {
+    flex: 1; /* Ocupa menos espaço na direita */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    position: sticky; /* Fixa o resumo ao rolar */
+    top: 80px; 
+}
+
+/* --- Estilo do Card de Item --- */
+.item-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.item-imagem {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Para não cortar a imagem do pneu/roda */
+    border-radius: 6px;
+    background-color: #f0f0f5; /* Fundo suave para a imagem */
+}
+
+.item-detalhes {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item-titulo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1d1d1f;
+}
+
+.item-variante {
+    font-size: 0.9rem;
+    color: #86868b; /* Cinza sutil */
+    margin: 0;
+}
+
+.item-acoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.item-preco {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #1d1d1f;
+}
+
+.divisor {
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.08); /* Linha divisória sutil */
+    margin: 10px 0;
+}
+
+/* --- Controle de Quantidade (Minimalista) --- */
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 999px; /* Formato pílula (mantendo o estilo) */
+    overflow: hidden;
+}
+
+.btn-quantidade {
+    background-color: #fff;
+    border: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    transition: background-color 0.15s;
+}
+
+.btn-quantidade:hover {
+    background-color: #f0f0f5;
+}
+
+.quantidade-input {
+    width: 35px;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+.quantidade-input::-webkit-outer-spin-button,
+.quantidade-input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Remove setas em Chrome/Safari */
+    margin: 0;
+}
+
+.btn-remover {
+    background: none;
+    border: none;
+    color: #f7553b; /* Cor de destaque para "remover" */
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.15s;
+}
+
+.btn-remover:hover {
+    color: #d1301c;
+}
+
+/* --- Resumo da Compra --- */
+.resumo-compra h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #1d1d1f;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 1rem;
+    color: #1d1d1f;
+}
+
+.resumo-compra hr {
+    margin: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.resumo-linha.total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.price { /* Reutilizando a classe de preço para o total final */
+    color: #1d1d1f;
+}
+
+.btn-checkout {
+    /* O estilo principal (btn-primary) já deve estar na folha de estilo principal */
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+}
+
+.continue-comprando {
+    /* O estilo principal (btn-secondary) já deve estar na folha de estilo principal */
+    margin-top: 10px;
+}
+
+
+/* --- Responsividade (Para dispositivos menores) --- */
+@media (max-width: 992px) {
+    .carrinho-layout {
+        flex-direction: column; /* Coloca resumo e itens um abaixo do outro */
+    }
+
+    .resumo-compra {
+        width: 100%;
+        position: static; /* Remove o sticky em telas pequenas */
+        margin-top: 20px;
+    }
+
+    .item-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .item-detalhes {
+        width: 100%;
+    }
+
+    .item-acoes {
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .item-preco {
+        flex-grow: 1;
+        text-align: left;
+    }
+}
