@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome do Produto - Sua Marca Automotiva</title>
+    <title>Rodas de Liga Leve Forjadas X90 - MotorStyle</title> 
    
     <link rel="stylesheet" href="paginaest.css">
+    <style>html { scroll-behavior: smooth; }</style> 
 </head>
 <body>
 
@@ -35,10 +36,10 @@
         <h2 class="product-subtitle">O seu carro com um jogo de rodas novos.</h2>
         <div class="cta-actions">
             <a href="#" class="btn btn-primary">Comprar Agora</a>
-            <a href="#" class="btn btn-secondary">Ver Especificações</a>
+            <a href="#specs-section" id="btn-scroll-down" class="btn btn-secondary">Ver Especificações</a>
         
         <div class="product-image-placeholder">
-          <img src="Roda liga.png" class="product-image">
+            <img src="Roda liga.png" id="produto-imagem" class="product-image">
         
         </div>
     </section>
@@ -49,7 +50,6 @@
            Agora com nossa rodas forjadas com uma resistencia melhor contra riscos.
         </p>
         <div class="media-placeholder" style="height: 450px;">
-            [IMAGEM OU VÍDEO NANO PARTÍCULAS]
         </div>
     </section>
 
@@ -65,7 +65,7 @@
         </div>
     </section>
 
-    <section class="specs-section">
+    <section class="specs-section" id="specs-section">
         <h3>Detalhes do Produto</h3>
         <ul class="specs-list">
             <li>As rodas de liga leve são feitas principalmente de uma mistura (liga) de alumínio e silício, com adição de ferro para aumentar a resistência.</li>
@@ -75,8 +75,8 @@
         </ul>
         <div class="price-box">
             <span>A partir de</span>
-            <span class="price">R$ 3.005,90</span>
-            <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+            <span class="price" id="produto-preco">R$ 3.005,90</span>
+            <a href="#" id="btn-add-carrinho" class="btn btn-primary">Adicionar ao Carrinho</a>
         </div>
     </section>
 
@@ -84,5 +84,21 @@
         <p>© 2025 Sua Marca Automotiva. Todos os direitos reservados.</p>
     </footer>
 
-</body>
-</html>
+    <script src="scroll.js"></script>
+    <script src="carrinho-script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded'), () => {
+            const btnAddCarrinho = document.getElementById('btn-add-carrinho');
+            const imagemElement = document.getElementById('produto-imagem');
+        }
+            if (btnAddCarrinho) {
+                btnAddCarrinho.addEventListener('click'), (e) => 
+                    e.preventDefault();
+            }
+                    const titulo = document.querySelector('.product-title').textContent;
+                    const precoTexto = document.getElementById('produto-preco').textContent;
+                    const imagemUrl = imagemElement ? imagemElement.getAttribute('src') : 'placeholder.jpg';
+                    
+                    // Converte o preço de 'R$ 3.005,90' para o número 3005.90
+                    const preco = parseFloat(precoTexto.replace('R$', '').replace('.', '').replace(',', '.').trim());
