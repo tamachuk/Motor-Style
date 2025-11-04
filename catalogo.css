@@ -4,11 +4,12 @@ body {
     color: #1d1d1f; /* Cor de texto padrão da Apple */
     background-color: #f5f5f7; /* Cor de fundo suave (quase branco) */
     line-height: 1.6;
+    padding: auto;
 }
 
 /* --- Cabeçalho de Navegação (Fixo e Clean) --- */
 .header-nav {
-    position: fixed;
+    position: fixed; /* ou fixed se quiser que ele flutue em cima de tudo */
     top: 0;
     left: 0;
     width: 100%;
@@ -51,7 +52,7 @@ body {
       --shadow:0 8px 24px rgba(17,24,39,0.08);
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    *{box-sizing:border-box}
+   
     body{
         margin:0;
         background:linear-gradient(180deg,var(--bg),#ffffff);
@@ -171,40 +172,13 @@ body {
         color:#3730a3
     }
 
-    footer{
-        margin-top:26px;
-        text-align:center;
-        color:var(--muted);
-        font-size:13px
-    }
-
-    footer{
-        background-color: #ccc;
-        color: #000000;
-        padding: 20px;
-        text-align: center;
-        margin-top: 30px;
-    }
     
-    footer p {
-        margin: 5px 0;
-    }
-    
-    footer a {
-        color: #000000;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    footer a:hover {
-        text-decoration: underline;
-    }
 .navbar {
-    position: sticky; /* ou fixed se quiser que ele flutue em cima de tudo */
+    position: fixed; /* ou fixed se quiser que ele flutue em cima de tudo */
     top: 0;
     left: 0;
     width: 100%;
-    height: 48px;
+    height: 56px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,3 +223,12 @@ body {
     margin-left: 5px;
     line-height: 1;
 }
+
+@media (max-width: 768px) {
+    .navbar nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
